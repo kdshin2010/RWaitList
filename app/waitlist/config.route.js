@@ -6,9 +6,14 @@
 	
 		configFunction.$inject = ['$routeProvider'];
 
+		//controller
+		//controllerAs property
+
 		function configFunction($routeProvider) {
 			$routeProvider.when('/waitlist', {
-				templateUrl: 'app/waitlist/waitlist.html'
+				templateUrl: 'app/waitlist/waitlist.html',
+				controller: 'WaitListController',
+				controllerAs: 'vm'
 			});
 
 		}
