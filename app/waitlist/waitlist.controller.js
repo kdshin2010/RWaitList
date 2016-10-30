@@ -27,6 +27,8 @@
 		function addParty() {
 			//use firebase method
 			vm.parties.$add(vm.newParty);
+			//to clear form set vm.newParty to party constructor
+			vm.newParty = new Party() 
 		}
 
 		//define add function party
