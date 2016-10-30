@@ -8,7 +8,8 @@
 				//Third Party Module
 
 				//custom module
-				'app.landing'
+				'app.landing',
+				'app.waitlist'
 		]);
 })();
 
