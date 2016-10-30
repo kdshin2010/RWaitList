@@ -3,9 +3,12 @@
 	angular
 		.module('app', [
 				'ngRoute',
-				'firebase'
+				'firebase',
 
 				//Third Party Module
-		])
-})()
+
+				//custom module
+				'app.landing'
+		]);
+})();
 

@@ -1,13 +1,32 @@
 First Commit
-	-created app folder
-	-contents with module
+		-created app folder
+		-contents with module
 
 
-WaitingList
-	-/app
-		-app.module.js
-	-/content
-		-/css
-	-index.html
-	-notes.txt
-	-README.md
+	*USE IIFE
+
+	MAINAPP MODULE
+		WaitingList
+			-/app
+				-app.module.js
+			-/content
+				-/css
+			-index.html
+			-notes.txt
+			-README.md
+
+	LANDING 
+
+		-CREATE landing folder
+		-Create landing module
+
+		WaitingList
+			-/app
+				-app.module.js
+			-/content
+			-/landing
+				-/css
+			-index.html
+			-notes.txt
+			-README.md
+
