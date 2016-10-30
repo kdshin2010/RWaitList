@@ -1,0 +1,13 @@
+First Commit
+	-created app folder
+	-contents with module
+
+
+WaitingList
+	-/app
+		-app.module.js
+	-/content
+		-/css
+	-index.html
+	-notes.txt
+	-README.md
