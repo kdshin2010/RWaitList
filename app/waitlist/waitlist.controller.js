@@ -8,16 +8,25 @@
 	function WaitListController($firebaseArray) {
 		console.log('here')
 		var vm = this;
-		vm.addParty = addParty
+		vm.addParty = addParty;
 
-		//https://waitlist-ed21f.firebaseio.com
+		//create Party constructor
+		function Party() {
+			this.name = '';
+			this.phone = '';
+			this.size = '';
+			this.done = false;
+			this.notified = false;
+		}
 
+		vm.newParty = new Party();
 		var fireParties = firebase.database().ref('parties');
 		vm.parties = $firebaseArray(fireParties);
 
+		//modify to add new party
 		function addParty() {
 			//use firebase method
-			vm.parties.$add('another');
+			vm.parties.$add(vm.newParty);
 		}
 
 		//define add function party
