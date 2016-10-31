@@ -8,9 +8,9 @@
 	function WaitListController($firebaseArray) {
 		console.log('here')
 		var vm = this;
-		vm.addParty = addParty;
+		var fireParties = firebase.database().ref('parties');
 
-		//create Party constructor
+
 		function Party() {
 			this.name = '';
 			this.phone = '';
@@ -19,8 +19,13 @@
 			this.notified = false;
 		}
 
+		vm.addParty = addParty;
+		vm.removeParty = removeParty
+
+		//create Party constructor
+
+
 		vm.newParty = new Party();
-		var fireParties = firebase.database().ref('parties');
 		vm.parties = $firebaseArray(fireParties);
 
 		//modify to add new party
@@ -29,6 +34,14 @@
 			vm.parties.$add(vm.newParty);
 			//to clear form set vm.newParty to party constructor
 			vm.newParty = new Party() 
+		}
+
+		//remove party method
+
+		function removeParty(party) {
+			//referenced by the ng-repeat
+			vm.parties.$remove(party);
+
 		}
 
 		//define add function party
