@@ -9,7 +9,8 @@
 
 				//custom module
 				'app.landing',
-				'app.waitlist'
+				'app.waitlist',
+				'app.auth'
 		]);
 })();
 
