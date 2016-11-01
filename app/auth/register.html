@@ -1,1 +1,6 @@
-register.html
+<form ng-submit="vm.register()" class="form-signin">
+	<h2 class="form-signin-heading">Sign Up</h2>
+	<input ng-model ="vm.user.email" type="email" class='form-control' placehold="Email address" required autofocus>
+	<input ng-model="vm.user.password" type='password' class='form-control' placehold="Password" required>
+	<button class='btn btn-lg btn-primary btn block' type='submit'>Sign up</button>
+</form>
